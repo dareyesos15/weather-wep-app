@@ -41,7 +41,7 @@ Starter de aplicación del clima construido con **Next.js 16**, **React 19**, **
 1. Clona el repositorio e instala las dependencias:
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/dareyesos15/weather-wep-app
 cd weather-wep-app
 pnpm install
 ```
@@ -82,15 +82,26 @@ src/
 ├── app/
 │   ├── api/
 │   │   └── weather/
-│   │       └── route.ts        # Proxy seguro hacia Visual Crossing
+│   │       └── route.ts              # Proxy seguro hacia Visual Crossing
 │   ├── globals.css
-│   ├── layout.tsx              # Root layout con metadatos y fuentes
+│   ├── layout.tsx                    # Root layout con metadatos y fuentes
 │   └── page.tsx
 ├── components/
-│   ├── query-provider.tsx      # TanStack Query provider
-│   └── weather-dashboard.tsx   # UI principal
+│   ├── query-provider.tsx            # TanStack Query provider
+│   ├── weather-dashboard.tsx         # UI principal / orchestrador
+│   └── weather/
+│       ├── current-weather-card.tsx  # Tarjeta de condiciones actuales
+│       ├── forecast-metric.tsx       # Métrica individual de pronóstico
+│       ├── hourly-forecast.tsx       # Carrusel de pronóstico por hora
+│       ├── info-row.tsx              # Fila de información clave
+│       ├── overview-panel.tsx        # Panel resumen del clima
+│       ├── refresh-icon.tsx          # Icono de actualización animado
+│       ├── stat-chip.tsx             # Chip de estadística
+│       ├── utils.ts                  # Helpers y formatters
+│       ├── weather-detail.tsx        # Vista de detalle ampliado
+│       └── weather-icon.tsx          # Icono dinámico según condición
 └── lib/
-    └── weather.ts              # Tipos e interfaces, función fetchWeather
+    └── weather.ts                    # Tipos, interfaces y fetchWeather
 ```
 
 ---
